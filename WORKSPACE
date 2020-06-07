@@ -169,12 +169,33 @@ http_archive(
 
 # Node
 http_archive(
-    name = "nodejs",
-    build_file = "//experimental/nodejs:BUILD.nodejs",
-    sha256 = "417bdc5402f6510fe1a5a898a9cdf1d67bd0202b5f014051c382f05358999534",
-    strip_prefix = "node-v10.17.0-linux-x64/",
-    type = "tar.gz",
-    urls = ["https://nodejs.org/dist/v10.17.0/node-v10.17.0-linux-x64.tar.gz"],
+    name = "nodejs10",
+    build_file = "//experimental/nodejs10:BUILD.nodejs",
+    sha256 = "1d3296763e46540047099e4910812e81c4899c0595f2d82474e2099c1e1603e2",
+    strip_prefix = "node-v10.21.0-linux-x64/",
+    type = "tar.xz",
+    urls = ["https://nodejs.org/dist/latest-v10.x/node-v10.21.0-linux-x64.tar.xz"],
+)
+
+
+# Node
+http_archive(
+    name = "nodejs12",
+    build_file = "//experimental/nodejs12:BUILD.nodejs",
+    sha256 = "2febc2506c298048bfddf896056be6191c1f08716876d960a4990bd63a7fe05a",
+    strip_prefix = "node-v12.18.0-linux-x64/",
+    type = "tar.xz",
+    urls = ["https://nodejs.org/dist/v12.18.0/node-v12.18.0-linux-x64.tar.xz"],
+)
+
+# Node
+http_archive(
+    name = "nodejs14",
+    build_file = "//experimental/nodejs14:BUILD.nodejs",
+    sha256 = "d65a9a8a547bfe67c6c08dae733a3e5a846700d5377c5f150164cc6bb5f6a039",
+    strip_prefix = "node-v14.4.0-linux-x64/",
+    type = "tar.xz",
+    urls = ["https://nodejs.org/dist/v14.4.0/node-v14.4.0-linux-x64.tar.xz"],
 )
 
 # dotnet
